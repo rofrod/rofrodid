@@ -1,0 +1,63 @@
+:root {
+    --clr-dark: black;
+    --clr-light: white;
+    --clr-accent: crimson;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    word-spacing: 1.4px;
+    font-family: 'roboto', sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    width: 80%;
+    height: 700px;
+    padding: 10px; 
+    border: 7px solid rgb(0, 0, 0);
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
+}
+
+.item { 
+    border: 7px solid red;
+    color: white;
+    background-color: rgb(255, 156, 176);
+    text-align: start;
+
+}
+
+.item-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.item-2 {
+    grid-row: 2 / 4;  /*bisa ditulis begini */
+    grid-column: 2 / 5;
+    z-index: 1;
+
+}
+
+.item-3 {
+    grid-area: 3 / 1 / 6 / 6;
+    z-index: 0;
+}
